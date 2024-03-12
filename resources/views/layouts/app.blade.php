@@ -17,8 +17,10 @@
 
     <script src="{{ asset('/assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('/assets/js/jQuery.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery.inputmask.bundle.js') }}"></script>
 
     <!-- Scripts -->
+    @yield('style')
 </head>
 <body>
     <div id="app">
@@ -85,5 +87,11 @@
             @yield('content')
         </main>
     </div>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 </body>
 </html>

@@ -22,12 +22,12 @@ return new class extends Migration
             $table->string('tad');
             $table->string('tadname')->nullable();
             $table->string('jins');
-            $table->date('tugilgan');
-            $table->date('maqom');
-            $table->date('files');
-            $table->date('xizmat');
-            $table->date('vitext');
-            $table->string('status')->default('0');
+            $table->integer('tugilgan');
+            $table->string('maqom');
+            $table->string('files');
+            $table->string('xizmat');
+            $table->text('vitext');
+            $table->string('status')->default('1');
             $table->timestamps();
         });
     }

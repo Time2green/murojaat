@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [Controller::class, 'index'])->name('index');
-Route::post('/appeal', [Controller::class, 'store'])->name('store');
+Route::post('/store-appeal', [Controller::class, 'store'])->name('store');
+Route::get('/reload-captcha', [Controller::class, 'reloadCaptcha'])->name('reload-captcha');
+Route::post('/check-status', [Controller::class, 'checkStatus'])->name('check-status');
+Route::get('/download/{id}', [Controller::class, 'download'])->name('download');
+Route::get('/get-regions', [Controller::class, 'getRegions'])->name('getRegions');
 
 Auth::routes(
     ['register' =>false]

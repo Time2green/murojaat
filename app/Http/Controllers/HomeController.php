@@ -27,12 +27,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return redirect('/appeal');
     }
 
     public function appealIndex()
     {
-        $appeals = Appeal::paginate(15);
+        $appeals = Appeal::latest()->paginate(15);
 
         return view('appeal.index', ['appeals' => $appeals]);
     }
@@ -63,7 +63,7 @@ class HomeController extends Controller
         $region->region = $request->input('tuman');
         $region->save();
 
-        return redirect('/index');
+        return redirect('/region');
     }
 
     public function regionEdit(Region $region)

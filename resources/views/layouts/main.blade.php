@@ -18,11 +18,12 @@
 
     <script src="{{ asset('/assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('/assets/js/jQuery.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery.inputmask.bundle.js') }}"></script>
 
 </head>
 <body>
 <div id="app">
-    <div class="container d-flex align-items-center pt-3">
+    <div class="container d-flex align-items-center py-3">
         <img src="{{ asset('/assets/image/logo.png') }}" style="width: 80px" alt="">
         <h6 style="text-transform: uppercase; width: 300px; margin-bottom: 0; padding-left: 1rem">O'zbekiston Respublikasi Davlat Aktivlarini Boshqarish Agentligiga Murojaat</h6>
     </div>
